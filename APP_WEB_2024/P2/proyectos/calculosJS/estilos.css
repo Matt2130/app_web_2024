@@ -8,13 +8,12 @@ body
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("pexels-pixabay-259818.jpg");
-    /*background-attachment: fixed;*/
+    background-attachment: fixed;
     background-size: cover;
-    height: 100vmax;
-    /*background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
     text-align: center;
-    columns: white;*/
+    columns: white;
 }
 
 #contenedor
@@ -31,6 +30,8 @@ h2{
     text-align: center;
     font-weight: normal;
     font-style: italic;
+    background-color: rgba(59, 63, 67, 0.351);
+    color: whitesmoke;
 }
 
 form{
@@ -56,10 +57,20 @@ form{
     width: auto;
 }
 
-#boton:hover{
+#boton{
     padding: 1.5vw;
     background-color: #d6e65d;
     color: ghostwhite;
     border-radius: 10px;
     border: 2px solid black;
+}
+
+#boton:hover{
+    background-color: #d6e65d;
+    border: 2px solid rgb(rgb(24, 160, 17), rgb(77, 177, 77), rgb(12, 12, 88));
+}
+
+#boton:active{
+    background-color: #d6e65d;
+    border: 2px solid rgb(rgb(24, 160, 17), rgb(77, 177, 77), rgb(12, 12, 88));
 }

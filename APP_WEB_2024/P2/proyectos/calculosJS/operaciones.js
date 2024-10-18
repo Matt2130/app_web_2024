@@ -20,6 +20,7 @@ function operacion()
         
     else
         {
+        resultado=document.getElementById("resultado").innerHTML=`<h2>${n1}${tipoope}${n2}=${ope}</h2>`;
         alert("Ingrese solo números por favor");
         }
 }
