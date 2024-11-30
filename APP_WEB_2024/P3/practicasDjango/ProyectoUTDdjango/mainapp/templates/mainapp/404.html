@@ -1,6 +1,12 @@
+{% extends 'layouts/layouts.html' %}
+
+{% block title %}
+    Error 404
+{% endblock title %}
+
 {% block content %}
     <script>
-        alert('Esta página no existe, lo voy a mandar a la página de inicio');
-        location.href={% url "inicio" %}
+        alert('Esta página no existe');
+        window.location.replace("{% url 'inicio' %}");
     </script>
-{% endblock  %}
+{% endblock content %}
