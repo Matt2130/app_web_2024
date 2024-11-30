@@ -14,15 +14,31 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from mainapp import views
+# from django.contrib import admin
+# from django.urls import path
+# from mainapp import views
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('inicio/', views.index, name='inicio'),
+#     path('', views.index, name='inicio'),
+#     path('acercade/', views.about, name='acercade'),
+#     path('mision/', views.mision, name='mision'),
+#     path('vision/', views.vision, name='vision'),
+#     path('register_user/', views.register_user, name='register_user'),
+#     path('login_user/', views.login_user, name='login_user'),
+    
+# ]
+
+from django.contrib import admin # type: ignore
+from django.urls import path, include, re_path # type: ignore
+from django.conf import settings #Para debug false # type: ignore
+from django.conf.urls.static import static # type: ignore
+from django.views.static import serve  # type: ignore
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio/', views.index, name='inicio'),
-    path('', views.index, name='inicio'),
-    path('acercade/', views.about, name='acercade'),
-    path('mision/', views.mision, name='mision'),
-    path('vision/', views.vision, name='vision'),
+    path('', include('mainapp.urls')),
 ]
+
+handler404 = 'mainapp.views.alerta404'
